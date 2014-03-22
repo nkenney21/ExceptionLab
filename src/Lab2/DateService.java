@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 public class DateService {
     
     private Date a;
-    private Calendar c;
+    private Calendar c = Calendar.getInstance();
     
     
     public Date createDateObject(String s){
@@ -35,7 +35,7 @@ public class DateService {
     
     public Calendar createCalendarObject(String d){
         Date b;
-        SimpleDateFormat sdf = new SimpleDateFormat("M dd, yyyy hmm a");
+        SimpleDateFormat sdf = new SimpleDateFormat("MMMMMMMMMMMM dd, yyyy hh:mm aa");
         try
         {
         b = sdf.parse(d);

@@ -10,6 +10,8 @@ public class StartUp {
         a.createDateObject("3/15/2014");
         System.out.println(a.getA());
         
+        a.createCalendarObject("March 15, 2014 2:30 PM");
+        System.out.println(a.getC());
     }
     
 }
