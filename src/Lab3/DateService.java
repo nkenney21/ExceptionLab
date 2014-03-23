@@ -1,7 +1,8 @@
 
 
-package Lab2;
+package Lab3;
 
+import Lab2.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -19,9 +20,33 @@ public class DateService {
     private Calendar c = Calendar.getInstance();
     
     
-    public Date createDateObject(String s){
+    public Date createDateObject(String s)throws IllegalArgumentException{
         
+        String[] str = s.split("/");
         
+        if(s.length() < 8 || s.length() > 10){
+             throw new IllegalArgumentException("Date string must be between 8 and 10 characters");
+        }
+        else{
+            
+            if(str.length != 3){
+                throw new IllegalArgumentException("Date format must include 2 / ");
+            }
+            else{
+                for(int x = 0; x < str.length; x++){
+                    char[] characters = str[x].toCharArray();
+                    for(char y : characters){
+                        
+                        if(!Character.isDigit(y)){
+                            throw new IllegalArgumentException("Date format must be numeric");
+                        }
+                        
+                    }
+                }
+                
+            }
+        
+        }
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         try
         {
