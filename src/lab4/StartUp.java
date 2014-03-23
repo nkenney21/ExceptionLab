@@ -1,8 +1,5 @@
-
-
 package lab4;
 
-import Lab3.*;
 
 public class StartUp {
     public static void main(String[] args) {
@@ -10,17 +7,17 @@ public class StartUp {
         DateService a = new DateService();
         
         try{
-        a.createDateObject("Ja/15/2014");
+        a.createDateObject("01/15/2014");
         }
-        catch(IllegalArgumentException ex){
+        catch(FormatException ex){
             System.out.println(ex.getMessage());
             
         }
         System.out.println(a.getA());
         
         try{
-        a.createCalendarObject("March 15, 2014 1230 PM");
-        }catch(IllegalArgumentException exc){
+        a.createCalendarObject("Marc h 15, 2014 1230 PM");
+        }catch(FormatException exc){
             System.out.println(exc.getMessage());
         }
         System.out.println(a.getC());
