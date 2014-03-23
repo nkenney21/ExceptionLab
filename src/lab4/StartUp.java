@@ -1,6 +1,8 @@
 
 
-package Lab3;
+package lab4;
+
+import Lab3.*;
 
 public class StartUp {
     public static void main(String[] args) {

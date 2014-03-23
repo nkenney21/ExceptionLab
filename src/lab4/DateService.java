@@ -1,7 +1,8 @@
 
 
-package Lab3;
+package lab4;
 
+import Lab3.*;
 import Lab2.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
