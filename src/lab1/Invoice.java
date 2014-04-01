@@ -30,7 +30,7 @@ public class Invoice {
     }
     
     
-    public String getDueDateAsString(){
+    public final String getDueDateAsString(){
         
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         Date d = getDueDate().getTime();
@@ -38,19 +38,19 @@ public class Invoice {
         
     }
 
-    public Calendar getInvoiceDate() {
+    public final Calendar getInvoiceDate() {
         return invoiceDate;
     }
 
-    public void setInvoiceDate(Calendar invoiceDate) {
+    public final void setInvoiceDate(Calendar invoiceDate) {
         this.invoiceDate = invoiceDate;
     }
 
-    public int getGracePeriod() {
+    public final int getGracePeriod() {
         return gracePeriod;
     }
 
-    public void setGracePeriod(int gracePeriod) {
+    public final void setGracePeriod(int gracePeriod) {
         this.gracePeriod = gracePeriod;
     }
     
