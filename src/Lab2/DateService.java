@@ -19,7 +19,7 @@ public class DateService {
     private Calendar c = Calendar.getInstance();
     
     
-    public Date createDateObject(String s){
+    public final Date createDateObject(String s){
         
         
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
@@ -34,7 +34,7 @@ public class DateService {
         
     }
     
-    public Calendar createCalendarObject(String d){
+    public final Calendar createCalendarObject(String d){
         Date b = null;
         SimpleDateFormat sdf = new SimpleDateFormat("MMMMMMMMMMMM dd, yyyy hh:mm aa");
         try
@@ -50,19 +50,19 @@ public class DateService {
                 
     }
 
-    public Date getA() {
+    public final Date getA() {
         return a;
     }
 
-    public void setA(Date a) {
+    public final void setA(Date a) {
         this.a = a;
     }
 
-    public Calendar getC() {
+    public final Calendar getC() {
         return c;
     }
 
-    public void setC(Calendar c) {
+    public final void setC(Calendar c) {
         this.c = c;
     }
 
